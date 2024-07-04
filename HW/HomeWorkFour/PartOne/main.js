@@ -11,7 +11,7 @@ function Search() {
    if (N % 1 == 0) return console.log(`Число N є простим числом`);
    
 
-   else {return false;}
+   else {return ("Число N не є простим числом");}
 
 }
 window.onload = Search;
