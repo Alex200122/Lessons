@@ -1,12 +1,14 @@
 function doubleLetter(str) {
+let doubleLetter = '';
 
-  let strArray = str.split('')
-
-  let doubleStr = (strArray * 2);
-
-  return doubleStr
+for (let i = 0; i < str.length; i++) {
+  doubleLetter += str[i] + str[i];
 }
 
-let InputString = prompt('')
-let double = doubleLetter(InputString);
-console.log(`${double}`);
+return doubleLetter
+
+
+}
+
+let inputString = prompt("");
+console.log(doubleLetter(inputString));
