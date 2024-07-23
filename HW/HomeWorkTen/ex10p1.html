@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Program10</title>
+  </head>
+  <body>
+    <script>
+      let notifications = {
+          group1: ['notification1', 'notification2'],
+          group2: ['notification3', 'notification4'],
+          group3: ['notification5', 'notification6']
+        };
+
+        
+        notifications[Symbol.iterator] = function* () {
+          
+          for (const group of Object.values(this)) {
+            
+            for (const notification of group) {
+             
+              yield notification;
+            }
+          }
+        };
+
+       
+        for (const notification of notifications) {
+          console.log(notification);
+        }
+    </script>
+    
+
+
+
+  </body>
+</html>
